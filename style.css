@@ -1,0 +1,55 @@
+/* --- CONFIGURAÇÕES DE DESIGN (VARIÁVEIS) --- */
+:root {
+    --primary: #004d40;    /* Verde escuro quadra */
+    --accent: #ffc107;     /* Amarelo bola */
+    --text: #2c3e50;
+    --bg: #f8f9fa;
+    --white: #ffffff;
+    --radius: 12px;
+    --font-size: 16px;
+}
+
+/* --- MODO ALTO CONTRASTE --- */
+body.high-contrast {
+    --primary: #ffff00;
+    --accent: #ffffff;
+    --bg: #000000;
+    --text: #ffffff;
+}
+
+/* --- ESTILOS GERAIS --- */
+body {
+    font-size: var(--font-size);
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: all 0.4s ease;
+}
+
+/* --- GRID RESPONSIVO (UX) --- */
+.grid-main {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+    /* Mobile-first: 1 coluna */
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .grid-main {
+        /* Desktop: 3 colunas automáticas */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* --- ANIMAÇÕES DE ENTRADA --- */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
