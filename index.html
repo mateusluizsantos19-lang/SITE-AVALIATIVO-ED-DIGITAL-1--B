@@ -1,53 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futsal Elite | Onde a Técnica vence a Força</title>
+    <title>Mundo do Futsal | Paixão e Velocidade</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="a11y-bar" role="complementary">
-        <button id="contrast-toggle" aria-label="Modo de Alto Contraste">🌓 Contraste</button>
-        <button id="font-up" aria-label="Aumentar texto">A+</button>
-        <button id="font-down" aria-label="Diminuir texto">A-</button>
-    </div>
 
-    <header role="banner">
-        <nav class="navbar" aria-label="Navegação Principal">
+    <header>
+        <nav class="navbar">
             <div class="logo">FUTSAL<span>PRO</span></div>
-            <ul>
-                <li><a href="#galeria">Equipamentos</a></li>
-                <li><a href="#fundamentos">Fundamentos</a></li>
-                <li><a href="#contato">Inscrições</a></li>
+            <ul class="nav-links">
+                <li><a href="#sobre" onclick="showMsg('Sobre o Futsal')">Sobre</a></li>
+                <li><a href="#regras" onclick="showMsg('Regras do Jogo')">Regras</a></li>
+                <li><a href="#galeria" onclick="showMsg('Galeria')">Galeria</a></li>
+                <li><a href="#curiosidades" onclick="showMsg('Curiosidades')">Curiosidades</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="hero scroll-reveal">
-            <div class="hero-content">
-                <h1>Domine a Quadra com Maestria</h1>
-                <p>O futsal exige raciocínio rápido e drible curto. Você está pronto?</p>
-                <a href="#galeria" class="btn-cta">Ver Destaques</a>
+    <section id="sobre" class="section">
+        <div class="content">
+            <h2>O que é o Futsal?</h2>
+            <div class="flex-container">
+                <div class="text">
+                    <p>O Futsal é uma variante do futebol jogada em quadras menores, geralmente em ambientes fechados. Originado no Uruguai na década de 1930, o esporte é conhecido por sua **extrema rapidez** e exigência técnica.</p>
+                    <p>Com 5 jogadores de cada lado, o jogo prioriza o controle de bola em espaços curtos e a tomada de decisão instantânea.</p>
+                </div>
+                <div class="image-placeholder">
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=500" alt="Jogador de Futsal">
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="galeria" class="scroll-reveal">
-            <h2>Destaques da Temporada</h2>
-            <div id="gallery-container" class="grid-main">
+    <section id="regras" class="section bg-light">
+        <div class="content">
+            <h2>Regras do Futsal</h2>
+            <div class="grid-regras">
+                <div class="regra-card">
+                    <h3>👥 Jogadores</h3>
+                    <p>5 jogadores por equipe (incluindo o goleiro) e substituições ilimitadas.</p>
                 </div>
-        </section>
-
-        <section id="fundamentos" class="scroll-reveal">
-            <h2>Fundamentos Essenciais</h2>
-            <div id="accordion-root">
+                <div class="regra-card">
+                    <h3>⏱️ Duração</h3>
+                    <p>Dois tempos de 20 minutos cronometrados (o relógio para quando a bola sai).</p>
                 </div>
-        </section>
-    </main>
+                <div class="regra-card">
+                    <h3>⚽ A Bola</h3>
+                    <p>Menor e mais pesada que a do futebol de campo, para quicar menos.</p>
+                </div>
+                <div class="regra-card">
+                    <h3>📏 Quadra</h3>
+                    <p>Dimensões padrão FIFA: 38m a 42m de comprimento por 20m a 25m de largura.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer role="contentinfo">
-        <p>© 2024 Futsal Elite - Educação Digital e Esportiva</p>
+    <section id="galeria" class="section">
+        <div class="content">
+            <h2>Galeria de Imagens</h2>
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1518604666860-9ed391f76460?auto=format&fit=crop&q=80&w=400" alt="Quadra" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&q=80&w=400" alt="Bola" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1575361204480-aadea25e6e68?auto=format&fit=crop&q=80&w=400" alt="Ação" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1628891890377-571130d47382?auto=format&fit=crop&q=80&w=400" alt="Time" class="gallery-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="curiosidades" class="section curiosidade-box">
+        <div class="content">
+            <h2>Você sabia?</h2>
+            <p>O futsal é considerado o maior "celeiro" de craques do futebol mundial. Ronaldinho Gaúcho, Neymar e Cristiano Ronaldo creditam seu controle de bola refinado aos anos de prática nas quadras de futsal!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Mundo do Futsal. Todos os direitos reservados.</p>
+        <div class="socials">
+            <span>Instagram</span> | <span>YouTube</span> | <span>Twitter</span>
+        </div>
     </footer>
 
     <script src="script.js"></script>
